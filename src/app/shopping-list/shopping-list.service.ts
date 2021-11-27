@@ -4,6 +4,7 @@ import { Ingredient } from '../shared/ingredient';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ShoppingListService {
   private items: Ingredient[] = [];
   constructor() { }

@@ -5,11 +5,5 @@ import { DropdownDirective } from './dropdown.directive';
   selector: 'rb-header',
   templateUrl: `header.component.html`,
 })
-export class HeaderComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class HeaderComponent {
 }
