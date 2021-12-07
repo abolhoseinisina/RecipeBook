@@ -1,24 +1,24 @@
 <div class="row">
-    <div class="col-xs-12">
-      <form id="shopping-list-add">
-        <div class="row">
-          <div class="col-sm-5 form-group">
-            <label for="item-name">Name</label>
-            <input type="text" id="item-name" required class="form-control">
-          </div>
-          <div class="col-sm-2 form-group">
-            <label for="item-amount">Amount</label>
-            <input type="text" id="item-amount" required class="form-control">
-          </div>
+  <div class="col-xs-12 col-md-12">
+    <form id="shopping-list-add" (ngSubmit)="onSubmit(form.value)" #form="ngForm">
+      <div class="row">
+        <div class="col-sm-5 col-md-4 form-group">
+          <label for="item-name">Name</label>
+          <input type="text" id="item-name" class="form-control" required [ngModel]="item.name" name="name">
         </div>
-        <div class="row">
-          <div class="col-md-4 col-xs-12 btn-group">
-            <button class="btn btn-success" type="submit">Add</button>
-            <button class="btn btn-warning" type="button">Delete Item</button>
-            <button class="btn btn-info" type="button">Clear</button>
-          </div>
+        <div class="col-sm-2 col-md-2 form-group">
+          <label for="item-amount">Amount</label>
+          <input type="text" id="item-amount" class="form-control" required [ngModel]="item.amount" name="amount">
         </div>
-      </form>
-    </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-xs-12 btn-group">
+          <button class="btn btn-success" type="submit" *ngIf="isAdd" [disabled]="!form.valid">Add</button>
+          <button class="btn btn-success" type="submit" *ngIf="!isAdd" [disabled]="!form.valid">Save</button>
+          <button class="btn btn-warning" type="button" *ngIf="!isAdd" [disabled]="!form.valid" (click)="onDelete()">Delete Item</button>
+          <button class="btn btn-info" type="button" *ngIf="!isAdd" (click)="onClear()">Clear</button>
+        </div>
+      </div>
+    </form>
   </div>
-  
+</div>
