@@ -1,6 +1,8 @@
 <div class="row mt-3">
     <div class="col-xs-12">
-        <a class="btn btn-success" [routerLink]="['new']">New Recipe</a>
+        <a class="btn btn-primary" (click)="onRefreshButton()">Refresh List</a>
+        <a class="btn btn-danger" [routerLink]="['new']">New Recipe</a>
+        <a class="btn btn-success" (click)="onSaveButton()">Save List</a>
     </div>
 </div>
 <div class="row mt-3">

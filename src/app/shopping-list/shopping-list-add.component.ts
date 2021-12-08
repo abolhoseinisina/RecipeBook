@@ -16,7 +16,6 @@ export class ShoppingListAddComponent implements OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes['item'].currentValue);
     if (changes['item'].currentValue === undefined) {
       this.isAdd = true;
       this.item = { name: '', amount: 0 };
