@@ -21,9 +21,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   onSaveButton(){
-    this.recipeService.storeData().subscribe(
-      (data) => console.log(data)
-    );
+    this.recipeService.storeData().subscribe();
   }
 
   onRefreshButton(){

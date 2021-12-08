@@ -16,6 +16,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { FooterComponent } from './footer.component';
+import { SaveAlertComponent } from './save-alert.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FooterComponent } from './footer.component';
     DropdownDirective,
     RecipeEditComponent,
     RecipeStartComponent,
-    FooterComponent
+    FooterComponent,
+    SaveAlertComponent
   ],
   imports: [
     BrowserModule,
