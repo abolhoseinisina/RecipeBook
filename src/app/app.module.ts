@@ -17,6 +17,7 @@ import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.comp
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { FooterComponent } from './footer.component';
 import { SaveAlertComponent } from './save-alert.component';
+import { ShoppingListModule } from './shopping-list/shopping-list.module';
 
 @NgModule({
   declarations: [
@@ -26,8 +27,6 @@ import { SaveAlertComponent } from './save-alert.component';
     RecipeListComponent,
     RecipeItemComponent,
     RecipeDetailComponent,
-    ShoppingListComponent,
-    ShoppingListAddComponent,
     DropdownDirective,
     RecipeEditComponent,
     RecipeStartComponent,
@@ -37,9 +36,9 @@ import { SaveAlertComponent } from './save-alert.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ShoppingListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
